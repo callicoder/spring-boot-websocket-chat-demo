@@ -1,0 +1,196 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: Roboto Arial sans-serif;
+    font-size: 1rem;
+    line-height: 1.58;
+    color: #333;
+    background-color: #edecec;
+    height: 100%;
+}
+
+body:before {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #128ff2;
+    content: "";
+    z-index: 0;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.form-control {
+    width: 100%;
+    min-height: 38px;
+    font-size: 15px;
+    border: 1px solid #e8e8e8;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input {
+    padding-left: 10px;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    box-shadow: none;
+    border: 1px solid transparent;
+    font-size: 14px;
+    outline: none;
+    line-height: 100%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 0.6rem 1rem;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+button.default {
+    background-color: #e8e8e8;
+    color: #333;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+button.primary {
+    background-color: #128ff2;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+}
+
+button.accent {
+    background-color: #ff4743;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+}
+
+#username-page {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.username-page-container {
+    background: #fff;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+    border-radius: 2px;
+    width: 100%;
+    max-width: 500px;
+    display: inline-block;
+    margin-top: 42px;
+    vertical-align: middle;
+    position: relative;
+    padding: 35px 55px 35px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: -180px;
+}
+
+.username-page-container .username-submit {
+    margin-top: 10px;
+}
+
+
+#chat-page {
+    position: relative;
+}
+
+.chat-container {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+    margin-top: 45px;
+}
+
+#chat-page ul {
+    list-style-type: none;
+    background-color: #FFFF;
+    margin: 0;
+    padding: 20px;
+    overflow: auto;
+    overflow-y: scroll;
+    padding: 20px;
+    height: 500px;
+}
+
+#chat-page #messageForm {
+    padding: 20px;
+}
+
+#chat-page ul li {
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+#chat-page ul li p {
+    margin: 0;
+}
+
+#chat-page .event-message {
+    width: 100%;
+    text-align: center;
+    clear: both;
+}
+
+#chat-page .event-message p {
+    color: #777;
+}
+
+#chat-page .chat-message {
+    padding-left: 72px;
+    position: relative;
+}
+
+#chat-page .chat-message i {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 42px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-style: normal;
+}
+
+#chat-page .chat-message span {
+    color: #333;
+    font-weight: 600;
+}
+
+#chat-page .chat-message p {
+    color: #43464b;
+}
