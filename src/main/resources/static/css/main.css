@@ -17,7 +17,7 @@ body {
     font-size: 1rem;
     line-height: 1.58;
     color: #333;
-    background-color: #edecec;
+    background-color: #f4f4f4;
     height: 100%;
 }
 
@@ -146,7 +146,7 @@ button.accent {
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
     margin-top: 30px;
     height: calc(100% - 50px);
-    max-height: 650px;
+    max-height: 600px;
     position: relative;
 }
 
@@ -236,9 +236,8 @@ button.accent {
     border-bottom: 1px solid #ececec;
 }
 
-.chat-header p {
+.chat-header h2 {
     margin: 0;
-    font-size: 17px;
     font-weight: 500;
 }
 
@@ -281,7 +280,7 @@ button.accent {
         top: 60px;
     }
 
-    .chat-header p {
-        font-size: 14px;
+    .chat-header h2 {
+        font-size: 15px;
     }
 }
