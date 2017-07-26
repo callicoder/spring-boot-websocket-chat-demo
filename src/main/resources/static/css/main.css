@@ -231,6 +231,7 @@ button.accent {
 }
 
 .connecting {
+    padding-top: 5px;
     text-align: center;
     color: #777;
 }
