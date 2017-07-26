@@ -6,6 +6,7 @@ var usernameForm = document.querySelector('#usernameForm');
 var messageForm = document.querySelector('#messageForm');
 var messageInput = document.querySelector('#message');
 var messageArea = document.querySelector('#messageArea');
+var connectingElement = document.querySelector('.connecting');
 
 var stompClient = null;
 var username = null;
@@ -25,19 +26,30 @@ function connect(event) {
         var socket = new SockJS('/ws');
         stompClient = Stomp.over(socket);
 
-        stompClient.connect({}, function (frame) {
-            // Subscribe to the Public Channel
-            stompClient.subscribe('/channel/public', onMessageReceived);
-
-            // Tell your username to the server
-            stompClient.send("/app/chat.addUser",
-                {},
-                JSON.stringify({sender: username, type: 'JOIN', timestamp: new Date().getTime()})
-            )
-        });
+        stompClient.connect({}, onConnected, onError);
     }
     event.preventDefault();
 }
+
+
+function onConnected() {
+    // Subscribe to the Public Channel
+    stompClient.subscribe('/channel/public', onMessageReceived);
+
+    // Tell your username to the server
+    stompClient.send("/app/chat.addUser",
+        {},
+        JSON.stringify({sender: username, type: 'JOIN', timestamp: new Date().getTime()})
+    )
+
+    connectingElement.classList.add('hidden');
+}
+
+
+function onError(error) {
+    connectingElement.textContent = 'Could not connect to WebSocket server. Error ' + error.headers.message;
+}
+
 
 function sendMessage(event) {
     var messageContent = messageInput.value.trim();

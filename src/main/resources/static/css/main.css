@@ -230,6 +230,11 @@ button.accent {
     font-weight: 500;
 }
 
+.connecting {
+    text-align: center;
+    color: #777;
+}
+
 @media screen and (max-width: 480px) {
     .chat-container {
         margin-left: 15px;
