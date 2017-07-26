@@ -262,4 +262,8 @@ button.accent {
     #messageForm .input-group input {
         width: calc(100% - 70px);
     }
+
+    .chat-header p {
+        font-size: 16px;
+    }
 }
