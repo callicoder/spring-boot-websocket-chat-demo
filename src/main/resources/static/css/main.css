@@ -181,6 +181,7 @@ button.accent {
 #chat-page .event-message p {
     color: #777;
     font-size: 14px;
+    word-wrap: break-word;
 }
 
 #chat-page .chat-message {
@@ -202,6 +203,7 @@ button.accent {
     text-align: center;
     border-radius: 50%;
     font-style: normal;
+    text-transform: uppercase;
 }
 
 #chat-page .chat-message span {
