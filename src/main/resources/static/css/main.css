@@ -102,8 +102,6 @@ button.accent {
 
 #username-page {
     text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .username-page-container {
@@ -185,7 +183,7 @@ button.accent {
 }
 
 #chat-page .chat-message {
-    padding-left: 72px;
+    padding-left: 68px;
     position: relative;
 }
 
@@ -194,7 +192,7 @@ button.accent {
     width: 42px;
     height: 42px;
     overflow: hidden;
-    left: 15px;
+    left: 10px;
     display: inline-block;
     vertical-align: middle;
     font-size: 18px;
@@ -229,8 +227,7 @@ button.accent {
 
 .chat-header {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 15px 20px 15px;
     border-bottom: 1px solid #ececec;
 }
 
@@ -256,5 +253,13 @@ button.accent {
         width: auto;
         margin-left: 15px;
         margin-right: 15px;
+    }
+
+    #messageForm .input-group button {
+        width: 65px;
+    }
+
+    #messageForm .input-group input {
+        width: calc(100% - 70px);
     }
 }
