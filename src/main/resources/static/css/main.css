@@ -143,6 +143,7 @@ button.accent {
     margin-top: 30px;
     height: calc(100% - 50px);
     max-height: 650px;
+    position: relative;
 }
 
 #chat-page ul {
@@ -152,7 +153,7 @@ button.accent {
     overflow: auto;
     overflow-y: scroll;
     padding: 0 20px 20px 20px;
-    height: calc(100% - 170px);
+    height: calc(100% - 150px);
 }
 
 #chat-page #messageForm {
@@ -241,12 +242,16 @@ button.accent {
     padding-top: 5px;
     text-align: center;
     color: #777;
+    position: absolute;
+    top: 65px;
+    width: 100%;
 }
 
 @media screen and (max-width: 480px) {
     .chat-container {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
     }
 
     .username-page-container {
@@ -263,7 +268,15 @@ button.accent {
         width: calc(100% - 70px);
     }
 
+    .chat-header {
+        padding: 10px;
+    }
+
+    .connecting {
+        top: 60px;
+    }
+
     .chat-header p {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
