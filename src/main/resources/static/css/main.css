@@ -63,6 +63,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 
+h1 {
+    font-size: 1.8em;
+}
+
 a {
     color: #128ff2;
 }
@@ -258,6 +262,7 @@ button.accent {
         width: auto;
         margin-left: 15px;
         margin-right: 15px;
+        padding: 25px;
     }
 
     #messageForm .input-group button {
