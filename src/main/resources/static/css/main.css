@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 1.8em;
+    font-size: 1.7em;
 }
 
 a {
@@ -125,7 +125,7 @@ button.accent {
     left: 0;
     right: 0;
     margin: 0 auto;
-    margin-top: -180px;
+    margin-top: -160px;
 }
 
 .username-page-container .username-submit {
@@ -145,7 +145,7 @@ button.accent {
     background-color: #fff;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
     margin-top: 30px;
-    height: calc(100% - 30px);
+    height: calc(100% - 60px);
     max-height: 600px;
     position: relative;
 }
@@ -250,11 +250,19 @@ button.accent {
     width: 100%;
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 730px) {
+
     .chat-container {
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chat-container {
+        height: calc(100% - 30px);
     }
 
     .username-page-container {
