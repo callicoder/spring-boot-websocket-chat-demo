@@ -26,13 +26,17 @@
 
     <div id="chat-page" class="hidden">
         <div class="chat-container">
+            <div class="chat-header">
+                <p>Spring WebSocket Chat Demo - Built with love by <a href="https://www.callicoder.com">CalliCoder</a></p>
+            </div>
             <ul id="messageArea">
 
             </ul>
             <form id="messageForm" name="messageForm" nameForm="messageForm">
                 <div class="form-group">
-                    <div class="input-group">
-                        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control" />
+                    <div class="input-group clearfix">
+                        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                        <button type="submit" class="primary">Send</button>
                     </div>
                 </div>
             </form>
