@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html,body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -41,7 +46,7 @@ body:before {
     width: 100%;
     min-height: 38px;
     font-size: 15px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #c8c8c8;
 }
 
 .form-group {
@@ -128,6 +133,7 @@ button.accent {
 
 #chat-page {
     position: relative;
+    height: 100%;
 }
 
 .chat-container {
@@ -137,6 +143,8 @@ button.accent {
     background-color: #fff;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
     margin-top: 30px;
+    height: calc(100% - 50px);
+    max-height: 650px;
 }
 
 #chat-page ul {
@@ -146,7 +154,7 @@ button.accent {
     overflow: auto;
     overflow-y: scroll;
     padding: 0 20px 20px 20px;
-    height: 450px;
+    height: calc(100% - 150px);
 }
 
 #chat-page #messageForm {
@@ -226,7 +234,7 @@ button.accent {
 
 .chat-header p {
     margin: 0;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 500;
 }
 
