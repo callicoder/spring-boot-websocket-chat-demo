@@ -145,7 +145,7 @@ button.accent {
     background-color: #fff;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
     margin-top: 30px;
-    height: calc(100% - 50px);
+    height: calc(100% - 30px);
     max-height: 600px;
     position: relative;
 }
@@ -156,7 +156,7 @@ button.accent {
     margin: 0;
     overflow: auto;
     overflow-y: scroll;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 0px 20px;
     height: calc(100% - 150px);
 }
 
@@ -264,6 +264,10 @@ button.accent {
         padding: 25px;
     }
 
+    #chat-page ul {
+        height: calc(100% - 120px);
+    }
+
     #messageForm .input-group button {
         width: 65px;
     }
@@ -281,6 +285,6 @@ button.accent {
     }
 
     .chat-header h2 {
-        font-size: 1.4em;
+        font-size: 1.1em;
     }
 }
