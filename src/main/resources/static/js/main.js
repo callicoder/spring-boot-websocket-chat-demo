@@ -40,7 +40,7 @@ function onConnected() {
     // Tell your username to the server
     stompClient.send("/app/chat.addUser",
         {},
-        JSON.stringify({sender: username, type: 'JOIN', timestamp: new Date().getTime()})
+        JSON.stringify({sender: username, type: 'JOIN'})
     )
 
     connectingElement.classList.add('hidden');
@@ -60,8 +60,7 @@ function sendMessage(event) {
         var chatMessage = {
             sender: username,
             content: messageInput.value,
-            type: 'CHAT',
-            timestamp: new Date().getTime()
+            type: 'CHAT'
         };
 
         stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
