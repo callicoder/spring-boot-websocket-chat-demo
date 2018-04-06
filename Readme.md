@@ -10,13 +10,13 @@ You can checkout the live version of the application at https://spring-ws-chat.h
 
 ## Steps to Setup
 
-1. Clone the application
+1. **Clone the application**
 
 ```bash
 git clone https://github.com/callicoder/spring-boot-websocket-chat-demo.git
 ```
 
-2. Build and run the app using maven
+2. **Build and run the app using maven**
 
 ```bash
 cd spring-boot-websocket-chat-demo
