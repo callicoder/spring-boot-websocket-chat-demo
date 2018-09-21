@@ -35,3 +35,18 @@ mvn spring-boot:run
 You can find the tutorial for this application on my blog -
 
 https://www.callicoder.com/spring-boot-websocket-chat-example/
+
+## Note
+If you are running rabbitmq from a docker instance Guest/Guest credentials will not work since the virtual host permissions block the request.
+
+Set the system login and system passcode to your admin account
+
+```bash
+registry.enableStompBrokerRelay("/topic")
+                .setRelayHost("localhost")
+                .setRelayPort(61613)
+                .setClientLogin("admin")
+                .setSystemLogin("admin")
+                .setSystemPasscode("password")
+                .setClientPasscode("password");
+```
