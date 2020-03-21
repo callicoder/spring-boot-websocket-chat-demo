@@ -8,6 +8,6 @@ jobs:
         name: Assign the users in PR
         steps:
             - name: Pull request user assigner
-              uses: txabman42/pr-assign-reviewers@v0.0.1
+              uses: txabman42/pr-assign-reviewers@master
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
