@@ -1,6 +1,10 @@
 package com.example.websocketdemo.controller;
 
-import com.example.websocketdemo.model.ChatMessage;
+
+import com.example.websocketdemo.models.MessageDTO;
+import com.example.websocketdemo.models.MessageType;
+import com.example.websocketdemo.models.User;
+import com.example.websocketdemo.services.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +38,9 @@ public class WebSocketEventListener {
         String username = (String) headerAccessor.getSessionAttributes().get("username");
         if(username != null) {
             logger.info("User Disconnected : " + username);
-
-            ChatMessage chatMessage = new ChatMessage();
-            chatMessage.setType(ChatMessage.MessageType.LEAVE);
-            chatMessage.setSender(username);
+            MessageDTO chatMessage = new MessageDTO();
+            chatMessage.setType(MessageType.LEAVE);
+            chatMessage.setUsername(username);
 
             messagingTemplate.convertAndSend("/topic/public", chatMessage);
         }
