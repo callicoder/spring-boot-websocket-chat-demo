@@ -1,5 +1,5 @@
 # Start with a base image containing Java runtime
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11
 
 # Add Maintainer Info
 MAINTAINER Rajeev Kumar Singh <callicoder@gmail.com>
