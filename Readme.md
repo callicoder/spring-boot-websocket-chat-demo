@@ -1,3 +1,5 @@
+[![Java CI with Maven](https://github.com/dotnes/spring-boot-websocket-chat-demo/actions/workflows/maven.yml/badge.svg)](https://github.com/dotnes/spring-boot-websocket-chat-demo/actions/workflows/maven.yml)
+
 ## Spring Boot WebSocket Chat Appplication
 
 You can checkout the live version of the application at https://spring-ws-chat.herokuapp.com/
