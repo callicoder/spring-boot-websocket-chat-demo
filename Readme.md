@@ -31,6 +31,7 @@ Alternatively, you can run the app directly without packaging it like so -
 ```bash
 mvn spring-boot:run
 ```
+The service is running at : http://localhost:8080
 
 ## Learn More
 
