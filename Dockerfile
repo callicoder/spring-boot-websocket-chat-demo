@@ -1,5 +1,5 @@
 # Start with a base image containing Java runtime
-FROM openjdk:11
+FROM openjdk:16.0
 
 # Add Maintainer Info
 MAINTAINER Rajeev Kumar Singh <callicoder@gmail.com>
