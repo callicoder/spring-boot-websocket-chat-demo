@@ -68,7 +68,6 @@ function sendMessage(event) {
     event.preventDefault();
 }
 
-
 function onMessageReceived(payload) {
     var message = JSON.parse(payload.body);
 
@@ -82,22 +81,38 @@ function onMessageReceived(payload) {
         message.content = message.sender + ' left!';
     } else {
         messageElement.classList.add('chat-message');
-
+        
         var avatarElement = document.createElement('i');
         var avatarText = document.createTextNode(message.sender[0]);
         avatarElement.appendChild(avatarText);
         avatarElement.style['background-color'] = getAvatarColor(message.sender);
-
+        
         messageElement.appendChild(avatarElement);
-
+        
         var usernameElement = document.createElement('span');
         var usernameText = document.createTextNode(message.sender);
         usernameElement.appendChild(usernameText);
         messageElement.appendChild(usernameElement);
     }
-
+    
     var textElement = document.createElement('p');
-    var messageText = document.createTextNode(message.content);
+    var messageText;
+
+    if(isURL(message.content)){
+        var hyperlink = message.content;
+        if(!hyperlink.match(/^https?:\/\//i)){
+            hyperlink = 'http://' + hyperlink;
+        }
+        messageText = document.createElement("a");
+        messageText.classList.add('linkify');
+        messageText.href = hyperlink;
+        messageText.target = "_blank";
+        messageText.innerHTML = message.content;
+    } 
+    else{
+        messageText = document.createTextNode(message.content);
+    }
+
     textElement.appendChild(messageText);
 
     messageElement.appendChild(textElement);
@@ -106,6 +121,10 @@ function onMessageReceived(payload) {
     messageArea.scrollTop = messageArea.scrollHeight;
 }
 
+function isURL(text){
+    const urlPattern = /^(https?:\/\/)?(([a-zA-Z0-9]+\.)+[a-zA-Z]{2,})((\/[^\s]*)*)$/i;
+    return urlPattern.test(text.trim());
+}
 
 function getAvatarColor(messageSender) {
     var hash = 0;

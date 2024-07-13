@@ -218,6 +218,15 @@ button.accent {
     color: #43464b;
 }
 
+.linkify{
+    color: rgb(67, 84, 209);
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{text-decoration: underline;}
+a:visited{color: rgb(88, 14, 137);}
+
+
 #messageForm .input-group input {
     float: left;
     width: calc(100% - 85px);
