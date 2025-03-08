@@ -1,10 +1,17 @@
 package com.example.websocketdemo.model;
 
-/**
- * Created by rajeevkumarsingh on 24/07/17.
- */
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "chat_messages")
 public class ChatMessage {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Enumerated(EnumType.STRING)
     private MessageType type;
+
     private String content;
     private String sender;
 
@@ -12,6 +19,14 @@ public class ChatMessage {
         CHAT,
         JOIN,
         LEAVE
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public MessageType getType() {
